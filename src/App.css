@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* For WebKit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Customize the color of the thumb */
+  border-radius: 5px; /* Adjust the border radius as needed */
+}
+
+.blockone{
+  height: 100vh;
+}
+.color{
+  background-color: orange;
+}
+.color2{
+  background-color: chocolate;
+}
+
+.s1{
+  background-image: url("./Photo/coffeetype/1.png");
+  background-size: cover;
+  background-position: 100%;
+}
+.s2{
+  background-image: url("./Photo/coffeetype/2.png");
+  background-size: cover;
+  background-position: 100%;
+}
+.s3{
+  background-image: url("./Photo/coffeetype/3.png");
+  background-size: cover;
+  background-position: 100%;
+}
+.s4{
+  background-image: url("./Photo/coffeetype/4.png");
+  background-size: cover;
+  background-position: 100%;
+}
+.s5{
+  background-image: url("./Photo/coffeetype/5.png");
+  background-size: cover;
+  background-position: 100%;
+}
+.Mocha{
+  background-image: url("./Photo/mocha.jpg");
+  background-size: cover;
+  background-position: 25%;
+}
+.Cappuccino{
+  background-image: url("./Photo/Cappucino.jpg");
+  background-size: 40vh;
+  background-position: 50%;
+}
+.Espresso{
+  background-image: url("./Photo/Espresso.jpg");
+  background-size: cover;
+  background-position: 100%;
+
+}
+.Latte{
+  background-image: url("./Photo/Latte.jpg");
+  background-size: cover;
+  background-position: 100%;
+
+
+}
+.Americano{
+  background-image: url("./Photo/Americano.jpg");
+  background-size: cover;
+  background-position: 100%;
+
+}
+.Nestcoffee{
+  background-image: url("./Photo/Nestcoffee2.jpg");
+  background-size: 20vh;
+  background-position: 20%;
+}
+.coke{
+  background-image: url("./Photo/Coke.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+.fanta{
+  background-image: url("./Photo/Fanta.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+.OISHI{
+  background-image: url("./Photo/OISHI.png");
+  background-size: cover;
+  background-position: 100%;
+}
+.water{
+  background-image: url("./Photo/water.jpg");
+  background-size: cover;
+  
+  background-position: 50%;
+}
+.redsoda{
+  background-image: url("./Photo/redsoda.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.greensoda{
+  background-image: url("./Photo/greensoda.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.Est{
+  background-image: url("./Photo/Est.png");
+  background-size: cover;
+  background-position: 50%;
+}
+.SPRITE{
+  background-image: url("./Photo/SPRITE.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.Tea{
+  background-image: url("./Photo/Tea.jpg");
+  background-size: cover;
+  background-position: 50%;
+
+}
+.GTea{
+  background-image: url("./Photo/green\ tea.jpg");
+  background-size: cover;
+  background-position: 50%;
+
+}
+
