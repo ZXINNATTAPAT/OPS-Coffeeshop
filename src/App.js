@@ -338,8 +338,8 @@ export default function App() {
             </div>
             <div className='col'>
               <h1>list summary</h1> <br />
-            <div className='card border shadow-sm p-3 mb-5  rounded' style={{height:"450px" , overflow: "auto"}}>
-              <div className="row g-4">
+            <div className=' ' style={{height:"450px" }}>
+              <div className="row g-3">
                   <div className="col-md-6">
                     <div className="card bg-primary text-white">
                       <div className="card-body">
