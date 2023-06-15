@@ -17,11 +17,7 @@ export default function App() {
   const [inputState, setinputState] = useState("");
   const [cart, setCart] = useState([]);
   const [orderdb,setorderdb] = useState([]);
-  
- 
   const cart2 = [];
-  
-
   const [desiredDates, setDesiredDates] = useState([]);
 
   const handleDateChange = (selectedDate) => {
@@ -43,6 +39,14 @@ export default function App() {
   
     return sum;
   }
+  function calprice() {
+    const data = cart;
+    console.log(data);
+    const sum = data.reduce((total, cart) => total + cart.price, 0);
+    return sum;
+  }
+  
+
   function count() {
     const selectedOrders = orderdb.filter((order) => {
       const orderDate = new Date(order.time).toLocaleDateString(); // Extracting the date from the order's time
@@ -53,15 +57,6 @@ export default function App() {
   
     return sum;
   }
-
-  
-  
-  
-  
-
-
-
-
 
   useEffect(() => {
     fetch('http://localhost:3001/api/showcart')
@@ -250,13 +245,22 @@ export default function App() {
                         <td>{order.name}</td>
                         <td>{order.Type}</td>
                         <td>{order.price}</td>
+                        
                       </tr>
                     ))}
                   </tbody>
-                </table></div>
-              
-              
+                </table>
+                </div>
+                      
+                  <div className='row'>
+                    <div className='col'> 
+                        <p>total price : {calprice().toLocaleString('th-TH', { style: 'currency', currency: 'THB' })}</p>
+                    </div>
+                </div>
+            
             </div>
+
+            
 
             <div className='row'>
               <div className="col ">
@@ -280,109 +284,105 @@ export default function App() {
           <div className='container'>
 
             <br />
-            <div className='row'>
-               <div className='col'>
-               <h1>Order table</h1> <br />
-            <div className='card border shadow-sm p-3 mb-5  rounded' style={{height:"450px" , overflow: "auto"}}>
-              <div className='mb-3'>
-                <label htmlFor="desiredDates">Desired Dates:</label>
-                  <DatePicker
-                    id="desiredDates"
-                    className="form-control"
-                    selected={desiredDates.length > 0 ? new Date(desiredDates[0]) : null}
-                    onChange={handleDateChange}
-                    dateFormat="yyyy-MM-dd"
-                  />
+                <div className='row'>
+                  <div className='col'>
+                  <h1>Order table</h1> <br />
+                <div className='card border shadow-sm p-3 mb-5  rounded' style={{height:"450px" , overflow: "auto"}}>
+                  <div className='mb-3'>
+                    <label htmlFor="desiredDates">Desired Dates:</label>
+                      <DatePicker
+                        id="desiredDates"
+                        className="form-control"
+                        selected={desiredDates.length > 0 ? new Date(desiredDates[0]) : null}
+                        onChange={handleDateChange}
+                        dateFormat="yyyy-MM-dd"
+                      />
+                    </div>
+                    <table className="table">
+                      <thead style={{ backgroundColor: "whitesmoke" }}>
+                        <tr>
+                          <th>Name</th>
+                          <th>Type</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                          <th>Time</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        {orderdb.map((order) => {
+                          const orderDate = new Date(order.time).toLocaleDateString(); 
+                          // Extracting the date from the order's time
+                          if (desiredDates.includes(orderDate)) {
+                            return (
+                                <tr key={order.id}>
+                                  <td>{order.name}</td>
+                                  <td>{order.Type}</td>
+                                  <td>{order.quantity}</td>
+                                  <td>{order.price}</td>
+                                  <td>{new Date(order.time).toLocaleString()}</td> 
+                                  
+                                </tr>
+                            );
+                          }
+                          return null; 
+                          // Skip rendering if the date doesn't match the desired date
+                        })}
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Income :</td>
+                          <td >{calnum().toLocaleString('th-TH', { style: 'currency', currency: 'THB' })}</td>
+                          <td></td>
+                          
+                        </tr>
+                      </tbody>
+                    </table>
                 </div>
-                <table className="table">
-                  <thead style={{ backgroundColor: "whitesmoke" }}>
-                    <tr>
-                      <th>Name</th>
-                      <th>Type</th>
-                      <th>Quantity</th>
-                      <th>Price</th>
-                      <th>Time</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {orderdb.map((order) => {
-                      const orderDate = new Date(order.time).toLocaleDateString(); 
-                      // Extracting the date from the order's time
-                      if (desiredDates.includes(orderDate)) {
-                        return (
-                            <tr key={order.id}>
-                              <td>{order.name}</td>
-                              <td>{order.Type}</td>
-                              <td>{order.quantity}</td>
-                              <td>{order.price}</td>
-                              <td>{new Date(order.time).toLocaleString()}</td> 
-                              
-                            </tr>
-                        );
-                      }
-                      return null; 
-                      // Skip rendering if the date doesn't match the desired date
-                    })}
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>Income :</td>
-                      <td >{calnum().toLocaleString('th-TH', { style: 'currency', currency: 'THB' })}</td>
-                      <td></td>
-                      
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-            </div>
-            <div className='col'>
-              <h1>list summary</h1> <br />
-            <div className=' ' style={{height:"450px" }}>
-              <div className="row g-3">
-                  <div className="col-md-6">
-                    <div className="card bg-primary text-white">
-                      <div className="card-body">
-                        <h5 className="card-title">Date M/D/Y: </h5>
-                        <h2 className="card-text">
-                          {desiredDates}
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="card bg-primary text-white">
-                      <div className="card-body">
-                        <h5 className="card-title">Total order</h5>
-                        <h2 className="card-text">
-                          {count()}
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="card bg-primary text-white">
-                      <div className="card-body">
-                        <h5 className="card-title">Total income</h5>
-                        <h2 className="card-text">
-                          {calnum().toLocaleString('th-TH', { style: 'currency', currency: 'THB' })}
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-            </div>
+                </div>
 
-            </div>
-           
-             
-            </div>
+                  <div className='col'>
+                    <h1>list summary</h1> <br />
+                  <div className=' ' style={{height:"450px" }}>
+                    <div className="row g-3">
+                        <div className="col-md-6">
+                          <div className="card bg-primary text-white">
+                            <div className="card-body">
+                              <h5 className="card-title">Date M/D/Y: </h5>
+                              <h2 className="card-text">
+                                {desiredDates}
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="card bg-primary text-white">
+                            <div className="card-body">
+                              <h5 className="card-title">Total order</h5>
+                              <h2 className="card-text">
+                                {count()}
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="card bg-primary text-white">
+                            <div className="card-body">
+                              <h5 className="card-title">Total income</h5>
+                              <h2 className="card-text">
+                                {calnum().toLocaleString('th-TH', { style: 'currency', currency: 'THB' })}
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                  </div>
+                  </div>
+              
+                </div>
               <br />
-              {/* Chart */}
-               
-            
-
-
+        
             <br />
             
            
