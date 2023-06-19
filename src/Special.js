@@ -61,7 +61,7 @@ export default function Special() {
       return (
             <div className="col-9">
               <div className="container card border 
-              shadow-sm p-4 mb-6 bg-body-tertiary rounded" style={{height:"750px" , overflow: "hidden auto"}}>
+              shadow-sm p-4 mb-6 bg-body-tertiary rounded" style={{height:"635px"}}>
                 
                 <div  >
                 <div className="row">

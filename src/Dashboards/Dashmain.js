@@ -86,7 +86,7 @@ export default function Dashmain() {
   return (
     <div className="col-9">
           <div className="container card border 
-          shadow-sm p-3 mb-5 bg-body-tertiary rounded" style={{height:"750px" , overflow: "hidden auto"}}>
+          shadow-sm p-3 mb-5 bg-body-tertiary rounded" style={{height:"650px" , overflow: "hidden auto"}}>
             <br />
 
             <h2>Insert Expenses</h2>

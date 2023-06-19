@@ -144,22 +144,14 @@ export default function App() {
   return (
     <div style={{height: "200vh"}}>
 
-      <div className="container-fluid blockone">
-        <br></br>
-       
-      <div className="row"> 
-        <div className="col-1">
-
-          <h1 className='text-center' >OPS</h1>
-          <br />
-
+      <div className="container-fluid ">
+       <br />
           <div className="container">
-              <div className="col">
                 <div >
                   <form className="form" >
-                  <div class="d-grid gap-4 col mx-auto">
-                      
-                                <button type="button" className="btn btn-primary " 
+                  <div class="row ">
+                    <h1 className='col m-2 p-3'>OPS</h1>
+                                <button type="button" className="btn btn-primary col m-2 p-3" 
                                   value={inputState} 
                                   onClick={() => {
                                     const selectedinput = "1";
@@ -167,7 +159,7 @@ export default function App() {
                                   }}>
                                     Coffee</button>
                               
-                                <button type="button" className="btn btn-primary " 
+                                <button type="button" className="btn btn-primary col m-2 p-3" 
                                 value={inputState} 
                                 onClick={() => {
                                   const selectedinput = "2";
@@ -176,7 +168,7 @@ export default function App() {
                                   Softdrink</button>
                             
                         
-                                <button type="button" className="btn btn-primary "
+                                <button type="button" className="btn btn-primary col m-2 p-3"
                                 value={inputState} 
                                 onClick={() => {
                                   const selectedinput = "3";
@@ -184,7 +176,7 @@ export default function App() {
                                 }}>
                                   Tea</button>
 
-                                <button type="button" className="btn btn-primary "
+                                <button type="button" className="btn btn-primary col m-2 p-3"
                                 value={inputState} 
                                 onClick={() => {
                                   const selectedinput = "4";
@@ -192,7 +184,44 @@ export default function App() {
                                 }}>
                                   Special</button>
 
-                                <button type="button" className="btn btn-primary "
+                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+
+                                  DB</button>
+                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+
+                                  DB</button>
+                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+                                  DB</button>
+                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+                                  DB</button>
+                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+                                  DB</button>
+                                <button type="button" className="btn btn-primary col m-2 p-3"
                                 value={inputState} 
                                 onClick={() => {
                                   const selectedinput = "5";
@@ -202,13 +231,14 @@ export default function App() {
 
                                 </div>
                         </form>
-                      </div>
-                    </div>
+                </div>
+                    
                 </div> 
-              </div>  
+      
+        <br />
 
-        
-      {(() => {
+      <div className='row'>
+        {(() => {
         switch(inputState) {
           case '1':
             return(<Coffeepage />)
@@ -225,8 +255,7 @@ export default function App() {
         }
       })()}
 
-        <div className="col-2">
-         
+        <div className="col-3">
             <div className='card border 
           shadow-sm p-3 mb-5 rounded' style={{height:"400px" , overflow: "auto"}}>
             <div className='card-body'>
@@ -251,23 +280,19 @@ export default function App() {
                   </tbody>
                 </table>
                 </div>
-                      
+
                   <div className='row'>
                     <div className='col'> 
                         <p>total price : {calprice().toLocaleString('th-TH', { style: 'currency', currency: 'THB' })}</p>
                     </div>
                 </div>
-            
             </div>
-
-            
-
             <div className='row'>
               <div className="col ">
-                    <button className="btn btn-primary" onClick={handleSubmitCart}>Add</button>
+                    <button className="btn btn-primary p-3" onClick={handleSubmitCart}>Add</button>
               </div>
               <div className="col ">
-                    <button className="btn btn-primary" onClick={handlefixCart}>Cancel</button>
+                    <button className="btn btn-primary p-3" onClick={handlefixCart}>Cancel</button>
               </div>
               <div className="col">
                   
@@ -277,6 +302,8 @@ export default function App() {
               
             </div>
       </div>
+      
+      
 
       </div>
       
