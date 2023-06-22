@@ -10,6 +10,7 @@ import Softdrink from './Softdrink';
 import Teapage from './Teapage';
 import Special from './Special';
 import Dashmain from './Dashboards/Dashmain';
+import Tableorder from './Tableorder';
 ChartJS.register(CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Filler,Legend);
 
 export default function App() {
@@ -142,7 +143,7 @@ export default function App() {
   }
   
   return (
-    <div style={{height: "200vh"}}>
+    <div style={{height: "100vh"}}>
 
       <div className="container-fluid ">
        <br />
@@ -151,8 +152,9 @@ export default function App() {
                   <form className="form" >
                   <div class="row ">
                     <h1 className='col m-2 p-3'>OPS</h1>
-                                <button type="button" className="btn btn-primary col m-2 p-3" 
+                                <button type="button" className="btn  col m-2 p-3" 
                                   value={inputState} 
+                                  style={{backgroundColor :"chocolate", color : "white"}}
                                   onClick={() => {
                                     const selectedinput = "1";
                                     setinputState(selectedinput);
@@ -161,6 +163,7 @@ export default function App() {
                               
                                 <button type="button" className="btn btn-primary col m-2 p-3" 
                                 value={inputState} 
+                                style={{backgroundColor : "blue"}}
                                 onClick={() => {
                                   const selectedinput = "2";
                                   setinputState(selectedinput);
@@ -168,38 +171,41 @@ export default function App() {
                                   Softdrink</button>
                             
                         
-                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                <button type="button" className="btn  col m-2 p-3"
                                 value={inputState} 
+                                style={{backgroundColor : "orangered" , color : "white"} }
                                 onClick={() => {
                                   const selectedinput = "3";
                                   setinputState(selectedinput);
                                 }}>
                                   Tea</button>
 
-                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                <button type="button" className="btn  col m-2 p-3"
                                 value={inputState} 
+                                style={{backgroundColor : "yellowgreen" ,color :"white"}}
                                 onClick={() => {
                                   const selectedinput = "4";
                                   setinputState(selectedinput);
                                 }}>
                                   Special</button>
 
-                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                <button type="button" className="btn  col m-2 p-3"
                                 value={inputState} 
+                                style={{backgroundColor :"red" ,color :"white"}}
                                 onClick={() => {
                                   const selectedinput = "5";
                                   setinputState(selectedinput);
                                 }}>
 
                                   DB</button>
-                                <button type="button" className="btn btn-primary col m-2 p-3"
+                                <button type="button" className="btn btn-secondary col m-2 p-3"
                                 value={inputState} 
                                 onClick={() => {
-                                  const selectedinput = "5";
+                                  const selectedinput = "6";
                                   setinputState(selectedinput);
                                 }}>
 
-                                  DB</button>
+                                  ODT</button>
                                 <button type="button" className="btn btn-primary col m-2 p-3"
                                 value={inputState} 
                                 onClick={() => {
@@ -250,6 +256,8 @@ export default function App() {
             return(<Special />)
           case '5':
             return(<Dashmain />)
+          case '6':
+            return(<Tableorder />)
           default:
             return(<Coffeepage />)
         }
@@ -287,17 +295,17 @@ export default function App() {
                     </div>
                 </div>
             </div>
+
             <div className='row'>
-              <div className="col ">
-                    <button className="btn btn-primary p-3" onClick={handleSubmitCart}>Add</button>
-              </div>
-              <div className="col ">
-                    <button className="btn btn-primary p-3" onClick={handlefixCart}>Cancel</button>
-              </div>
-              <div className="col">
-                  
-              </div>
               
+                    <button className="btn btn-success col m-2 p-3 " 
+                    onClick={handleSubmitCart}>
+                      Add</button>
+          
+                    <button className="btn btn-primary col m-2 p-3" 
+                    onClick={handlefixCart}>
+                      Cancel</button>
+
             </div>
               
             </div>
@@ -307,7 +315,7 @@ export default function App() {
 
       </div>
       
-        <div className='container-fluid blockone'>
+        {/* <div className='container-fluid blockone'>
           <div className='container'>
 
             <br />
@@ -416,7 +424,7 @@ export default function App() {
 
           </div>
 
-        </div>
+        </div> */}
     </div>
   );
 }

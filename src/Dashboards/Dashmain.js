@@ -86,66 +86,69 @@ export default function Dashmain() {
   return (
     <div className="col-9">
           <div className="container card border 
-          shadow-sm p-3 mb-5 bg-body-tertiary rounded" style={{height:"650px" , overflow: "hidden auto"}}>
+          shadow-sm p-4 mb-6 bg-body-tertiary rounded" style={{height:"635px" }}>
+            <h2 style={{color :"red"}}>Insert Expenses</h2>
             <br />
-
-            <h2>Insert Expenses</h2>
     
             <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="id_pd" className="form-label">
-                        ID:
-                        </label>
-                        <input
-                        type="text"
-                        id="id_pd"
-                        name="id_pd"
-                        value={formData.id_pd}
-                        onChange={handleChange}
-                        className="form-control"
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="Name_pd" className="form-label">
-                        Name:
-                        </label>
-                        <input
-                        type="text"
-                        id="Name_pd"
-                        name="Name_pd"
-                        value={formData.Name_pd}
-                        onChange={handleChange}
-                        className="form-control"
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="price" className="form-label">
-                        Price:
-                        </label>
-                        <input
-                        type="text"
-                        id="price"
-                        name="price"
-                        value={formData.price}
-                        onChange={handleChange}
-                        className="form-control"
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="quantity" className="form-label">
-                        Quantity:
-                        </label>
+              <div className='row'>
+                      <div className="col mb-3 p-2">
+                          <input
+                          type="text"
+                          id="id_pd"
+                          name="id_pd"
+                          placeholder='ID'
+                          value={formData.id_pd}
+                          onChange={handleChange}
+                          className="form-control"
+                          />
+                      </div>
+                      <div className="col mb-3 p-2">
                         <input
                         type="text"
                         id="quantity"
                         name="quantity"
+                        placeholder='Quantity'
                         value={formData.quantity}
                         onChange={handleChange}
                         className="form-control"
                         />
                     </div>
+                      <div className="col mb-3 p-2">
+                          <input
+                          type="text"
+                          id="price"
+                          name="price"
+                          placeholder='Price'
+                          value={formData.price}
+                          onChange={handleChange}
+                          className="form-control"
+                          />
+                      </div>
                     
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    
+                      <div className=" col mb-3 p-2">
+                          
+                          <input
+                          type="text"
+                          id="Name_pd"
+                          name="Name_pd"
+                          value={formData.Name_pd}
+                          onChange={handleChange}
+                          placeholder='Name'
+                          className="form-control"
+                          />
+                      </div>
+                    
+                    <div className='col'>
+                      <button type="submit" className="btn btn-primary ">Submit</button>
+                    </div>
+                    
+                  </div>
+
+                    
+                      
+                    
             </form>
             <br />
             <div className="mb-3">
