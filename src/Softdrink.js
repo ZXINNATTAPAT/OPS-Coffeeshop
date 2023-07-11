@@ -43,7 +43,6 @@ export default function Softdrink() {
     });
   };
 
-
   return (
     <div className="col-9">
     <div className="container 
