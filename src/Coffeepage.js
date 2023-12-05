@@ -29,8 +29,8 @@ export default function Coffeepage() {
     { id:0 ,id_pd: 'A004', Type: 'mix', name: 'Latte', quantity: 1, price: 55 ,card :"btn-info"},
     { id:1 ,id_pd: 'A005', Type: 'mix', name: 'Americano', quantity: 1, price: 40 ,card :"btn-info"},
     { id:2 ,id_pd: 'A006', Type: 'mix', name: 'Nest coffee', quantity: 1, price: 30, card: "btn-info" },
-    { id:3 ,id_pd: 'A005', Type: '', name: 'Null', quantity: 0, price: 0,card :"disabled btn-secondary"},
-    { id:4 ,id_pd: 'A006', Type: '', name: 'Null', quantity: 0, price: 0, card: "disabled btn-secondary" },
+    { id:3 ,id_pd: 'A005', Type: '', name: 'Null---', quantity: 0, price: 0,card :"disabled btn-secondary"},
+    { id:4 ,id_pd: 'A006', Type: '', name: 'Null---', quantity: 0, price: 0, card: "disabled btn-secondary" },
   ];
 
   const [orders ,setOrders] = useState([]);
@@ -59,18 +59,16 @@ export default function Coffeepage() {
   };
   
   return (
-        <div className="col-9">
+        <div className="">
           <div className="container card border 
-          shadow-sm p-4 mb-6 bg-body-tertiary rounded" style={{height:"635px"}}>
-           
+          shadow-sm p-2 mb-4 bg-body-tertiary" >
             <div  >
             <div className="row">
               {menu.map((item) => (
-                <div className="col" key={item.id}>
-                  <div className="card" style={{ height: '125px' }}>
-                    <div className="row g-0">
-                     
-                      <div className="col"> 
+                <div className="col m-2" key={item.id}>
+                  <div className="" >
+                    <div className="row ">
+                      <div className="col-lg-12"> 
                       <button
                             type="button"
                             className={`btn btn-primary ${item.card}`}
@@ -80,8 +78,7 @@ export default function Coffeepage() {
                         <div className="card-body">
                           <h5 className="card-title">{item.name}</h5>
                           <div className="row">
-                            <div className="form-group col-6">
-                              
+                            <div className="form-group col">
                               <input
                                 className="form-control form-control-sm"
                                 type="text"
@@ -89,7 +86,7 @@ export default function Coffeepage() {
                                 readOnly
                               />
                             </div>
-                            <div className="form-group col-6">
+                            <div className="form-group col">
                               
                               <input
                                 className="form-control form-control-sm"
@@ -115,11 +112,11 @@ export default function Coffeepage() {
             <br />
             <div className="row">
               {menu2.map((item) => (
-                <div className="col" key={item.id}>
-                  <div className="card" style={{ height: '125px' }}>
-                    <div className="row g-0">
+                <div className="col m-2" key={item.id}>
+                  <div className="" style={{  }}>
+                    <div className="row ">
                      
-                      <div className="col"> 
+                      <div className="col-lg-12"> 
                       <button
                             type="button"
                             className={`btn btn-primary ${item.card}`}
@@ -128,7 +125,7 @@ export default function Coffeepage() {
                         <div className="card-body">
                           <h5 className="card-title">{item.name}</h5>
                           <div className="row" >
-                            <div className="form-group col-6" >
+                            <div className="form-group col" >
                               <input
                                 className="form-control form-control-sm"
                                 type="text"
@@ -136,7 +133,7 @@ export default function Coffeepage() {
                                 readOnly
                               />
                             </div>
-                            <div className="form-group col-6">
+                            <div className="form-group col">
                               <input
                                 className="form-control form-control-sm"
                                 type="text"
@@ -162,11 +159,11 @@ export default function Coffeepage() {
            
             <div className="row">
               {menu4.map((item) => (
-                <div className="col" key={item.id}>
-                  <div className="card" style={{ height: '125px' }}>
-                    <div className="row g-0">
+                <div className="col m-2" key={item.id}>
+                  <div className="" style={{  }}>
+                    <div className="row ">
                      
-                      <div className="col"> 
+                      <div className="col-lg-12"> 
                       <button
                             type="button"
                             className={`btn btn-primary ${item.card}`}
@@ -175,7 +172,7 @@ export default function Coffeepage() {
                         <div className="card-body">
                           <h5 className="card-title">{item.name}</h5>
                           <div className="row">
-                            <div className="form-group col-6">
+                            <div className="form-group col">
                               
                               <input
                                 className="form-control form-control-sm"
@@ -184,7 +181,7 @@ export default function Coffeepage() {
                                 readOnly
                               />
                             </div>
-                            <div className="form-group col-6">
+                            <div className="form-group col">
                               
                               <input
                                 className="form-control form-control-sm"
@@ -211,11 +208,11 @@ export default function Coffeepage() {
             
             <div className="row">
               {menu6.map((item) => (
-                <div className="col" key={item.id}>
-                  <div className="card" style={{ height: '125px' }}>
-                    <div className="row g-0">
+                <div className="col m-2" key={item.id}>
+                  <div className="" style={{  }}>
+                    <div className="row ">
                      
-                      <div className="col"> 
+                      <div className="col-lg-12"> 
                       <button
                             type="button"
                             className={`btn btn-primary ${item.card}`}
@@ -224,7 +221,7 @@ export default function Coffeepage() {
                         <div className="card-body">
                           <h5 className="card-title">{item.name}</h5>
                           <div className="row">
-                            <div className="form-group col-6">
+                            <div className="form-group col">
                               
                               <input
                                 className="form-control form-control-sm"
@@ -233,7 +230,7 @@ export default function Coffeepage() {
                                 readOnly
                               />
                             </div>
-                            <div className="form-group col-6">
+                            <div className="form-group col">
                               
                               <input
                                 className="form-control form-control-sm"

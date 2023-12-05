@@ -14,9 +14,6 @@ export default function Maindb() {
   const [orderdb,setorderdb] = useState([]);
   const [exData, setexData] = useState([]);
  
-  
-  
-
   const [desiredDates, setDesiredDates] = useState([]);
 
   const handleDateChange = (selectedDate) => {
@@ -48,14 +45,12 @@ export default function Maindb() {
   
     return sum;
   }
-
   const formatDateString = (dateString) => {
     const dateObj = new Date(dateString);
     const month = dateObj.toLocaleString('default', { month: 'short' });
     const day = dateObj.getDate();
     return `${month} ${day}`;
   };
-  
   const groupItemsByDay = (items) => {
     const groups = {};
     orderdb.forEach((item) => {
@@ -67,7 +62,6 @@ export default function Maindb() {
     });
     return Object.values(groups);
   };
-
   const groupItemsByDay2 = (items) => {
     const groups = {};
     exData.forEach((item) => {
@@ -80,7 +74,7 @@ export default function Maindb() {
     return Object.values(groups);
   };
 
-  const groupedItems = groupItemsByDay(cart);
+const groupedItems = groupItemsByDay(cart);
 const labels = groupedItems.map((group) => group.day);
 
 const groupedItems2 = groupItemsByDay2(exData);
@@ -216,13 +210,9 @@ const data = {
 
 //   
 
-  
-  
+
   return (
     <div style={{height: "100vh"}}>
-
-      
-      
         <div className='container-fluid blockone'>
           <div className='container'>
 

@@ -143,16 +143,17 @@ export default function App() {
   }
   
   return (
-    <div style={{height: "100vh"}}>
+    <div style={{}}>
 
       <div className="container-fluid ">
        <br />
-          <div className="container">
+
+        <div className="container">
                 <div >
                   <form className="form" >
                   <div class="row ">
-                    <h1 className='col m-2 p-3'>OPS</h1>
-                                <button type="button" className="btn  col m-2 p-3" 
+                    <h2 className='col m-2 p-1'>OPS</h2>
+                                <button type="button" className="btn col m-2 p-3" 
                                   value={inputState} 
                                   style={{backgroundColor :"chocolate", color : "white"}}
                                   onClick={() => {
@@ -179,8 +180,11 @@ export default function App() {
                                   setinputState(selectedinput);
                                 }}>
                                   Tea</button>
+                                  
+                                
 
-                                <button type="button" className="btn  col m-2 p-3"
+                           
+                                 <button type="button" className="btn  col m-2 p-3"
                                 value={inputState} 
                                 style={{backgroundColor : "yellowgreen" ,color :"white"}}
                                 onClick={() => {
@@ -198,52 +202,60 @@ export default function App() {
                                 }}>
 
                                   DB</button>
+
                                 <button type="button" className="btn btn-secondary col m-2 p-3"
                                 value={inputState} 
                                 onClick={() => {
                                   const selectedinput = "6";
                                   setinputState(selectedinput);
                                 }}>
-
                                   ODT</button>
-                                <button type="button" className="btn btn-primary col m-2 p-3"
-                                value={inputState} 
-                                onClick={() => {
-                                  const selectedinput = "5";
-                                  setinputState(selectedinput);
-                                }}>
-                                  DB</button>
-                                <button type="button" className="btn btn-primary col m-2 p-3"
-                                value={inputState} 
-                                onClick={() => {
-                                  const selectedinput = "5";
-                                  setinputState(selectedinput);
-                                }}>
-                                  DB</button>
-                                <button type="button" className="btn btn-primary col m-2 p-3"
-                                value={inputState} 
-                                onClick={() => {
-                                  const selectedinput = "5";
-                                  setinputState(selectedinput);
-                                }}>
-                                  DB</button>
-                                <button type="button" className="btn btn-primary col m-2 p-3"
-                                value={inputState} 
-                                onClick={() => {
-                                  const selectedinput = "5";
-                                  setinputState(selectedinput);
-                                }}>
-                                  DB</button>
+                                  </div>
+                            
 
-                                </div>
+                               
+
+                                {/* <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+                                  DB</button> */}
+
+                                {/* <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+                                  DB</button> */}
+
+                                {/* <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+                                  DB</button> */}
+
+                                {/* <button type="button" className="btn btn-primary col m-2 p-3"
+                                value={inputState} 
+                                onClick={() => {
+                                  const selectedinput = "5";
+                                  setinputState(selectedinput);
+                                }}>
+                                  DB</button> */}
+
+                                
                         </form>
                 </div>
                     
-                </div> 
+        </div> 
       
         <br />
 
-      <div className='row'>
+      <div className='container'>
         {(() => {
         switch(inputState) {
           case '1':
@@ -262,10 +274,15 @@ export default function App() {
             return(<Coffeepage />)
         }
       })()}
+      </div>
 
-        <div className="col-3">
-            <div className='card border 
-          shadow-sm p-3 mb-5 rounded' style={{height:"400px" , overflow: "auto"}}>
+      <br/>
+
+        <div className='container'>
+          <br/>
+
+        <div className="">
+            <div className='card border container shadow-sm   rounded' style={{  overflow: "auto"}}>
             <div className='card-body'>
               <h3 className='card-title' >Cart</h3>
                 <table className="table card-text" style={{fontSize :"14px"}}>
@@ -296,20 +313,26 @@ export default function App() {
                 </div>
             </div>
 
-            <div className='row'>
-              
-                    <button className="btn btn-success col m-2 p-3 " 
-                    onClick={handleSubmitCart}>
-                      Add</button>
-          
-                    <button className="btn btn-primary col m-2 p-3" 
-                    onClick={handlefixCart}>
-                      Cancel</button>
+            <div className='container'>
+              <br/>
+              <div className='row'>
+                
+                      <button className="btn btn-success col m-2 p-3 " 
+                      onClick={handleSubmitCart}>
+                        Add</button>
+            
+                      <button className="btn btn-primary col m-2 p-3" 
+                      onClick={handlefixCart}>
+                        Cancel</button>
 
+              </div>
             </div>
               
-            </div>
-      </div>
+        </div>
+        
+        </div>
+
+      
       
       
 
