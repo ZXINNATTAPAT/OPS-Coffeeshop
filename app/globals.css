@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* For WebKit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Customize the color of the thumb */
+  border-radius: 5px; /* Adjust the border radius as needed */
+}
+
+.blockone{
+  height: 100vh;
+}
+
+.color{
+  background-color: orange;
+}
+
+.color2{
+  background-color: chocolate;
+}
+
+.s1{
+  background-image: url("/Photo/coffeetype/1.png");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.s2{
+  background-image: url("/Photo/coffeetype/2.png");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.s3{
+  background-image: url("/Photo/coffeetype/3.png");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.s4{
+  background-image: url("/Photo/coffeetype/4.png");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.s5{
+  background-image: url("/Photo/coffeetype/5.png");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.Mocha{
+  background-image: url("/Photo/mocha.jpg");
+  background-size: cover;
+  background-position: 25%;
+}
+
+.Cappuccino{
+  background-image: url("/Photo/Cappucino.jpg");
+  background-size: 40vh;
+  background-position: 50%;
+}
+
+.Espresso{
+  background-image: url("/Photo/Espresso.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.Latte{
+  background-image: url("/Photo/Latte.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.Americano{
+  background-image: url("/Photo/Americano.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.Nestcoffee{
+  background-image: url("/Photo/Nestcoffee2.jpg");
+  background-size: 20vh;
+  background-position: 20%;
+}
+
+.coke{
+  background-image: url("/Photo/Coke.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.fanta{
+  background-image: url("/Photo/Fanta.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.OISHI{
+  background-image: url("/Photo/OISHI.png");
+  background-size: cover;
+  background-position: 100%;
+}
+
+.water{
+  background-image: url("/Photo/water.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.redsoda{
+  background-image: url("/Photo/redsoda.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.greensoda{
+  background-image: url("/Photo/greensoda.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.Est{
+  background-image: url("/Photo/Est.png");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.SPRITE{
+  background-image: url("/Photo/SPRITE.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.Tea{
+  background-image: url("/Photo/Tea.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.GTea{
+  background-image: url("/Photo/green tea.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+/* POS App Styles */
+.pos-app {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.category-btn {
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.category-btn:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.category-btn.active {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.product-section {
+  min-height: 400px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table {
+  font-size: 0.95rem;
+}
+
+.table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.btn {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+/* Order Table Improvements */
+.table-hover tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.05);
+  transform: translateX(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.transition-hover {
+  transition: all 0.2s ease;
+}

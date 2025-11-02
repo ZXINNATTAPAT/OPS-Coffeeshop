@@ -59,10 +59,8 @@ export default function Coffeepage() {
   };
   
   return (
-        <div className="">
-          <div className="container card border 
-          shadow-sm p-2 mb-4 bg-body-tertiary" >
-            <div  >
+        <div>
+          <div className="container card border p-2 m-1" >
             <div className="row">
               {menu.map((item) => (
                 <div className="col m-2" key={item.id}>
@@ -72,30 +70,24 @@ export default function Coffeepage() {
                       <button
                             type="button"
                             className={`btn btn-primary ${item.card}`}
-                            
                             onClick={() => handleAddToCart(item)}
                           >
                         <div className="card-body">
-                          <h5 className="card-title">{item.name}</h5>
-                          <div className="row">
-                            <div className="form-group col">
-                              <input
-                                className="form-control form-control-sm"
-                                type="text"
-                                value={item.Type}
-                                readOnly
-                              />
+                          <p className="card-title">{item.name}</p>
+                            <div className="row">
+                                <input
+                                  className="form-control col p-1 m-1"
+                                  type="text"
+                                  value={item.Type}
+                                  readOnly
+                                />
+                                <input
+                                  className="form-control col p-1 m-1"
+                                  type="text"
+                                  value={item.price}
+                                  readOnly
+                                />
                             </div>
-                            <div className="form-group col">
-                              
-                              <input
-                                className="form-control form-control-sm"
-                                type="text"
-                                value={item.price}
-                                readOnly
-                              />
-                            </div>
-                          </div>
                           <br />
                          
                             
@@ -123,29 +115,23 @@ export default function Coffeepage() {
                             onClick={() => handleAddToCart(item)}
                           >
                         <div className="card-body">
-                          <h5 className="card-title">{item.name}</h5>
-                          <div className="row" >
-                            <div className="form-group col" >
-                              <input
-                                className="form-control form-control-sm"
-                                type="text"
-                                value={item.Type}
-                                readOnly
-                              />
+                          <p className="card-title">{item.name}</p>
+                            <div className="row" >
+                                <input
+                                  className="form-control col"
+                                  type="text"
+                                  value={item.Type}
+                                  readOnly
+                                />
+                                <input
+                                  className="form-control col"
+                                  type="text"
+                                  value={item.price}
+                                  readOnly
+                                />
                             </div>
-                            <div className="form-group col">
-                              <input
-                                className="form-control form-control-sm"
-                                type="text"
-                                value={item.price}
-                                readOnly
-                              />
-                            </div>
-                          </div>
                           <br />
                          
-                            
-                          
                         </div>
                       </button>
                       </div>
@@ -170,12 +156,12 @@ export default function Coffeepage() {
                             onClick={() => handleAddToCart(item)}
                           >
                         <div className="card-body">
-                          <h5 className="card-title">{item.name}</h5>
+                          <p className="card-title">{item.name}</p>
                           <div className="row">
                             <div className="form-group col">
                               
                               <input
-                                className="form-control form-control-sm"
+                                className="form-control "
                                 type="text"
                                 value={item.Type}
                                 readOnly
@@ -184,7 +170,7 @@ export default function Coffeepage() {
                             <div className="form-group col">
                               
                               <input
-                                className="form-control form-control-sm"
+                                className="form-control "
                                 type="text"
                                 value={item.price}
                                 readOnly
@@ -219,12 +205,12 @@ export default function Coffeepage() {
                             onClick={() => handleAddToCart(item)}
                           >
                         <div className="card-body">
-                          <h5 className="card-title">{item.name}</h5>
+                          <p className="card-title">{item.name}</p>
                           <div className="row">
                             <div className="form-group col">
                               
                               <input
-                                className="form-control form-control-sm"
+                                className="form-control "
                                 type="text"
                                 value={item.Type}
                                 readOnly
@@ -233,7 +219,7 @@ export default function Coffeepage() {
                             <div className="form-group col">
                               
                               <input
-                                className="form-control form-control-sm"
+                                className="form-control "
                                 type="text"
                                 value={item.price}
                                 readOnly
@@ -255,7 +241,7 @@ export default function Coffeepage() {
             </div>
             <br />
             
-            </div>
+            
           </div>  
           <div>
     
