@@ -1,8 +1,6 @@
-'use client'
-
 import './globals.css'
 import Script from 'next/script'
-import { CartProvider } from '../contexts/CartContext'
+import { ClientProviders } from '../components/ClientProviders'
 
 export default function RootLayout({ children }) {
   return (
@@ -16,9 +14,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <CartProvider>
+        <ClientProviders>
           {children}
-        </CartProvider>
+        </ClientProviders>
         <Script 
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

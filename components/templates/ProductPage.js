@@ -45,12 +45,24 @@ export function ProductPage({ categoryId }) {
         title={category ? `${category.icon} ${category.name}` : 'Products'}
         subtitle={`${items.length} item${items.length !== 1 ? 's' : ''} available`}
       >
-        <div className="row g-3">
+        {/* Desktop Grid View */}
+        <div className="row g-3 d-none d-md-flex">
           {items.map(item => (
-            <div key={item.id} className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+            <div key={item.id} className="col-xl-2 col-lg-3 col-md-4">
               <ProductCard product={item} />
             </div>
           ))}
+        </div>
+
+        {/* Mobile Card List View */}
+        <div className="d-block d-md-none">
+          <div className="row g-3">
+            {items.map(item => (
+              <div key={item.id} className="col-12">
+                <ProductCard product={item} mobileView={true} />
+              </div>
+            ))}
+          </div>
         </div>
       </Card>
     </div>
